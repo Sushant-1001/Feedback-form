@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div>
+        <h1>Feedback Form</h1>
+
+        <form action="/submit" method="POST">
+
+            <input type="text" name="name" placeholder="Name" required>
+            
+            <input type="email" name="email" placeholder="Email" required>
+
+            <select name="rating" required>
+                <option value="">Select Rating</option>
+
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>  
+                <option>4</option>
+                <option>5</option>
+
+            </select>
+            
+            <textarea name="message" rows="5" placeholder="Message" required></textarea>
+            
+            <button type="submit">Submit</button>
+            
+        </form>
+
+       <a href="/view" class="view-btn">View All Feedback</a>
+
+    </div>
+</body>
+</html>
